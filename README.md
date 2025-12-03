@@ -23,7 +23,6 @@ The objective of this framework is to demonstrate best practices in UI automatio
 
 ## 📁 Project Structure
 
-```bash
 challenge_sauce_demo/
 │── config/              # Configuration and environment settings
 │── pages/               # Page Object Models
@@ -33,6 +32,8 @@ challenge_sauce_demo/
 │── requirements.txt     # Dependencies list
 │── .gitignore           # Ignored files and folders
 │── README.md            # Project documentation
+
+---
 
 ## ⚙️ Setup Instructions
 
