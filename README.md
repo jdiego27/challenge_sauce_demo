@@ -48,7 +48,10 @@ venv\Scripts\activate    # Windows
 ### 3️⃣ Install Dependencies
 pip install -r requirements.txt
 
----
+### 4️⃣ Create your environment file
+cp .env.example .env
+
+### 5️⃣ Update `.env` with your credentials.
 
 ## ▶️ Run Tests
 
