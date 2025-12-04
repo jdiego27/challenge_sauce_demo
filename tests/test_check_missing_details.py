@@ -6,7 +6,7 @@ from pages.checkout_overview_page import CheckoutOverview
 def test_checkout_missing_details(logged_in_driver):
 
     product_page = ProductPage(logged_in_driver)
-    checkout_page = CheckoutPage (logged_in_driver)
+    checkout_page = CheckoutPage(logged_in_driver)
     checkout_information_page = CheckoutInformation(logged_in_driver)
 
     product_page.add_product("sauce-labs-backpack")
