@@ -56,7 +56,10 @@ cp .env.example .env
 ## ▶️ Run Tests
 
 Run all tests:
-pytest
+pytest (will run chrome by default)
+
+pytest --browser=chrome
+pytest --browser=firefox
 
 Run test with HTML report:
 pytest --html=reports/report.html
