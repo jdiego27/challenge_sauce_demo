@@ -17,6 +17,5 @@ class SortPage(BasePage):
             text_price = p.text
             clean_price = text_price.replace("$", "")
             number_price = float(clean_price)
-            price_list.append(number_price)
-            
+            price_list.append(number_price) 
         return price_list
