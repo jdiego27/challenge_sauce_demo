@@ -10,7 +10,13 @@ class SortPage(BasePage):
         self.select(self.SORT_CONTAINER, "Price (low to high)")
 
     def get_all_prices(self):
-        
         prices = self.finds(self.PRICE_INVENTORY)
-        #prices = self.finds(self.PRODUCT_PRICES)
-        return [float(p.text.replace("$", "")) for p in prices]
+        price_list = []
+        
+        for p in prices:
+            text_price = p.text
+            clean_price = text_price.replace("$", "")
+            number_price = float(clean_price)
+            price_list.append(number_price)
+            
+        return price_list
