@@ -13,7 +13,7 @@ class ProductPage(BasePage):
 
 
     def add_product(self, product_id: str):
-        product_btn_locator = (By.ID, self.PRODUCT_BTN_TEMPLATE.format(product_id))
+        product_btn_locator = (By.ID, f"{self.PRODUCT_BTN_TEMPLATE}{product_id}")
         self.click(product_btn_locator)
 
     def add_products(self, product_ids: list[str]):
