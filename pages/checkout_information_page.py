@@ -8,17 +8,6 @@ class CheckoutInformation(BasePage):
     ZIP_CODE = (By.ID, "postal-code")
     CHECKOUT_CONTINUE_BTN = (By.ID, "continue")
     ERROR_INFORMATION_MSG = (By.CSS_SELECTOR, "div.error-message-container.error h3[data-test='error']")
-
-    """
-    def checkout_overview(self, firstname, lastname, zipcode):
-        self.type(self.FIRST_NAME, firstname)
-        self.type(self.LAST_NAME, lastname)
-        self.type(self.ZIP_CODE, zipcode)
-        self.click(self.CHECKOUT_CONTINUE_BTN)
-        """
-
-    def get_error_message(self):
-        return self.get_text(self.ERROR_INFORMATION_MSG)
     
     def checkout_overview(self, fname=None, lname=None, zip_code=None):
         if fname is not None:
@@ -33,7 +22,4 @@ class CheckoutInformation(BasePage):
         self.click(self.CHECKOUT_CONTINUE_BTN)
 
     def get_error_message(self) -> str:
-        """
-        Return the text of the order completion header
-        """
         return self.get_text(self.ERROR_INFORMATION_MSG)

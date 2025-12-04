@@ -13,10 +13,6 @@ class ProductPage(BasePage):
 
 
     def add_product(self, product_id: str):
-        """
-        Click the 'Add to Cart' button for a specific product.
-        :param product_id: Product identifier as used in button ID
-        """
         product_btn_locator = (By.ID, self.PRODUCT_BTN_TEMPLATE.format(product_id))
         self.click(product_btn_locator)
 
@@ -26,12 +22,8 @@ class ProductPage(BasePage):
             self.add_product(product_id)
 
     def get_cart_count(self) -> int:
-        """
-        Get the number of items currently in the cart.
-        Returns 0 if cart badge is not visible (empty cart).
-        """
         try:
-            badge = WebDriverWait(self.driver, 5).until(
+            badge = self.wait.until(
                 EC.visibility_of_element_located(self.CART_BADGE)
             )
             return int(badge.text)
@@ -39,10 +31,6 @@ class ProductPage(BasePage):
             return 0
         
     def remove_product(self, product_id: str):
-        """
-        Click the 'Remove' button for a specific product.
-        :param product_id: Product identifier as used in button ID
-        """
         remove_btn_locator = (By.ID, f"remove-{product_id}")
         self.click(remove_btn_locator)
 

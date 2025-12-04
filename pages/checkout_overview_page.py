@@ -10,7 +10,4 @@ class CheckoutOverview(BasePage):
         self.click(self.CHECKOUT_FINISH_BTN)
         
     def get_confirmation_message(self) -> str:
-        """
-        Return the text of the order completion header
-        """
         return self.get_text(self.COMPLETE_HEADER)
