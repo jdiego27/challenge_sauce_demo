@@ -1,9 +1,7 @@
 from pages.product_page import ProductPage
 
 def test_add_product_to_cart(logged_in_driver):
-    driver = logged_in_driver
-
-    product_page = ProductPage(driver)
+    product_page = ProductPage(logged_in_driver)
     # Add the backpack product
     product_page.add_product("sauce-labs-backpack")
 
