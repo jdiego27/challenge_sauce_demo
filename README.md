@@ -69,7 +69,9 @@ pytest --html=reports/report.html
 ## 🧪 Test Scope
 - Login/Logout functionality
 - Add a product and products to cart
+- Remove a product from the cart
 - Checkout process
+- Attempt to check out process with missing details
 - Error validations
 - UI flows for end-to-end purchase
 
